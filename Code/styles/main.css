@@ -18,4 +18,216 @@ html {
   scroll-behavior: smooth;
   -ms-scroll-snap-type: y mandatory;
       scroll-snap-type: y mandatory;
+  background-color: #111;
+}
+
+.lanindingscreen {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+nav {
+  background-color: #111;
+  color: #fff;
+  font-family: "Cabin", sans-serif;
+  height: 5em;
+  width: 100%;
+}
+
+.social {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+}
+
+.social a {
+  text-decoration: none;
+}
+
+#twitterlogo {
+  width: 2.5%;
+  height: 2.5%;
+}
+
+#discordlogo {
+  width: 2.5%;
+  height: 2.5%;
+}
+
+.logo {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  font-size: clamp(10px, 3vw, 35px);
+  text-decoration: none;
+}
+
+.topline {
+  width: 8em;
+  height: 0.1em;
+  background-image: -webkit-gradient(linear, right top, left top, from(#111), color-stop(#9600b2), to(#111));
+  background-image: linear-gradient(to left, #111, #9600b2, #111);
+}
+
+.burger {
+  position: absolute;
+  display: block;
+  top: 1em;
+  right: 1em;
+  opacity: 1;
+}
+
+.burger div {
+  width: 38px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.nav-links {
+  position: absolute;
+  top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  opacity: 0;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: clamp(10px, 2vw, 40px);
+}
+
+.nav-active {
+  height: 100%;
+  opacity: 1;
+}
+
+.navlinks-active {
+  top: 8em;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  opacity: 1;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#111), to(#9600b2));
+  background-image: linear-gradient(to bottom, #111, #9600b2);
+}
+
+#active {
+  text-shadow: 2px 2px 10px #9600b2;
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transition: translateY(50px);
+    transition: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transition: translateY(0px);
+    transition: translateY(0px);
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    -webkit-transition: translateY(50px);
+    transition: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transition: translateY(0px);
+    transition: translateY(0px);
+  }
+}
+
+@-webkit-keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-10px);
+            transform: rotateX(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+
+@keyframes transitionIn {
+  from {
+    opacity: 0;
+    -webkit-transform: rotateX(-10px);
+            transform: rotateX(-10px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+            transform: rotateX(0);
+  }
+}
+
+.toggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+          transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -6px);
+          transform: rotate(45deg) translate(-8px, -6px);
+}
+
+@media screen and (max-width: 39.9375em) {
+  .burger {
+    top: 0.5em;
+    right: 0.5em;
+  }
+  .nav-links li a {
+    font-size: clamp(30px, 5vw, 80px);
+  }
+  .logo {
+    top: 2em;
+    font-size: clamp(20px, 4vw, 45px);
+  }
+  .social {
+    left: 0.8em;
+    top: 0.8em;
+  }
+  #twitterlogo {
+    width: 7.5%;
+    height: 7.5%;
+  }
+  #discordlogo {
+    width: 7.5%;
+    height: 7.5%;
+  }
 }
