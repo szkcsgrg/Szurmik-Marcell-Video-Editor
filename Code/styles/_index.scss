@@ -1,3 +1,4 @@
+// Landing Screen
 .lanindingscreen {
   display: grid;
   place-items: center;
@@ -12,7 +13,104 @@
     font-family: $main-font;
   }
 }
+// Quote Panel
 .quote {
-  height: 100vh;
+  height: 15vh;
   background-color: $accent-theme-color;
+  display: grid;
+  place-items: center;
+  h3 {
+    color: $main-font-color;
+    text-align: center;
+    font-family: $secondary-font;
+    font-style: italic;
+  }
+}
+
+// Photos Screen
+.photos {
+  padding-left: 10em;
+  padding-right: 10em;
+  height: 100vh;
+  background-color: $secondary-theme-color;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 50% 50%;
+  overflow: hidden;
+}
+.image-holder {
+  grid-column-start: 1;
+  img {
+    width: clamp(300px, 30vw, 600px);
+  }
+}
+.text-holder {
+  grid-column-start: 2;
+  p {
+    font-family: $main-font;
+    color: $main-font-color;
+    font-size: clamp(23px, 3vw, 35px);
+  }
+  span a {
+    font-size: clamp(40px, 4vw, 60px);
+    text-decoration: none;
+    color: $accent-theme-color;
+    font-weight: bold;
+  }
+}
+@media screen and (max-width: $small) {
+  .photos {
+    overflow: hidden;
+    padding-left: 3em;
+    padding-right: 3em;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+  .image-holder {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+  .text-holder {
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+}
+
+// Work With Panel
+.workwith {
+  height: 60vh;
+  background-color: $main-theme-color;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30% 70%;
+  padding-top: 5em;
+  padding-left: 10em;
+  padding-right: 10em;
+  padding-bottom: 5em;
+  h2 {
+    color: $main-font-color;
+    font-family: $main-font;
+    font-size: clamp(28px, 3vw, 45px);
+    grid-column-start: 1;
+    grid-row-start: 1;
+    z-index: 1;
+  }
+  img {
+    z-index: 0;
+    grid-column-start: 1;
+    grid-row-start: 1;
+    width: clamp(300px, 60vw, 1200px);
+  }
+}
+@media screen and (max-width: $small) {
+  .workwith {
+    height: 100vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 35% 32% 32%;
+    padding-top: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
+    padding-bottom: 1em;
+  }
 }

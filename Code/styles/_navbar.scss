@@ -25,7 +25,10 @@ nav {
   display: grid;
   place-items: center;
   font-size: clamp(10px, 3vw, 35px);
-  text-decoration: none;
+  a {
+    text-decoration: none;
+    color: $main-font-color;
+  }
 }
 .topline {
   width: 8em;

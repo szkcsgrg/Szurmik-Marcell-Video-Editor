@@ -3,7 +3,6 @@ const navSlide = () => {
     const navlinks = document.querySelector(".nav-links");
     const nav = document.querySelector("nav");
     const navLinksli = document.querySelectorAll('.nav-links li');
-    const bottom = document.querySelector(".bottom");
 
     burger.addEventListener('click', () => {
       //Toggle
@@ -19,10 +18,10 @@ const navSlide = () => {
         }
         else
         {
-          link.style.animation = `navLinkFade 0.5s ease forwards ${index / 8 + 0.5}s`
+          link.style.animation = `navLinkFade 0.9s ease forwards ${index / 16 + 0.1}s`
         }
       });
-  
+
       //Burger Animation
       burger.classList.toggle('toggle');
     });
