@@ -15,3 +15,10 @@
 - Fonts
 - Navbar
 - Itemprop for each elements
+
+<br />
+
+## Bugs
+
+- Small device overflow-x off
+- Links display none or put somewere else to not be able to click on it while its not opened.
