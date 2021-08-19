@@ -38,5 +38,7 @@
 
 ## Bugs
 
+- Bigger Landing Screen Image
+- Zoom out.
 - Small device overflow-x hidden ✅
 - Links display none ✅
