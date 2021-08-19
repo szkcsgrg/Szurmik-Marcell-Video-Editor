@@ -1,24 +1,42 @@
 # Things To Do
 
-## SEO
+## His part
 
-- Title
-- Descritption
+- Page Title
+- Page Descritption
 - Twitter Title
 - Twitter Descritption
 - Twitter Image
+- Quote text
+- Photos text
+- Images, Videos
+- Email system
+- About text
 
 <br />
 
 ## My part
 
-- Fonts
-- Navbar
+- Basic Structure ✅
 - Itemprop for each elements
+- Screens
+  - Navbar ✅
+  - Landing Screen
+  - Quote Screen
+  - Photos Screen
+  - Work With Screen
+  - Timelines Screen
+  - Videos Screen
+  - Contac Me Screen
+  - Footer
+
+<br />
+
+---
 
 <br />
 
 ## Bugs
 
-- Small device overflow-x off
-- Links display none or put somewere else to not be able to click on it while its not opened.
+- Small device overflow-x hidden ✅
+- Links display none ✅
