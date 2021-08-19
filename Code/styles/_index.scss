@@ -1,4 +1,18 @@
 .lanindingscreen {
   display: grid;
   place-items: center;
+  background-image: url("../images/HomePage/VideoEditor.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100vh;
+  h1 {
+    font-size: clamp(125px, 9vw, 250px);
+    text-align: center;
+    color: $main-font-color;
+    font-family: $main-font;
+  }
+}
+.quote {
+  height: 100vh;
+  background-color: $accent-theme-color;
 }

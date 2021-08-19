@@ -25,10 +25,26 @@ html {
   display: -ms-grid;
   display: grid;
   place-items: center;
+  background-image: url("../images/HomePage/VideoEditor.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 100vh;
+}
+
+.lanindingscreen h1 {
+  font-size: clamp(125px, 9vw, 250px);
+  text-align: center;
+  color: #fff;
+  font-family: "Cabin", sans-serif;
+}
+
+.quote {
+  height: 100vh;
+  background-color: #9600b2;
 }
 
 nav {
-  background-color: #111;
+  position: fixed;
   color: #fff;
   font-family: "Cabin", sans-serif;
   height: 5em;
@@ -66,8 +82,8 @@ nav {
 .topline {
   width: 8em;
   height: 0.1em;
-  background-image: -webkit-gradient(linear, right top, left top, from(#111), color-stop(#9600b2), to(#111));
-  background-image: linear-gradient(to left, #111, #9600b2, #111);
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), color-stop(#9600b2), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), #9600b2, rgba(0, 0, 0, 0));
 }
 
 .burger {
@@ -98,16 +114,20 @@ nav {
 .nav-links li a {
   text-decoration: none;
   color: #fff;
-  font-size: clamp(10px, 2vw, 40px);
+  font-size: clamp(15px, 3vw, 45px);
+  top: 25em;
 }
 
 .nav-active {
   height: 100%;
   opacity: 1;
+  overflow: hidden;
 }
 
 .navlinks-active {
-  top: 8em;
+  right: 0;
+  top: -0.6em;
+  padding-top: 3em;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -119,8 +139,8 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100%;
-  width: 100%;
+  height: 120%;
+  width: 25%;
   opacity: 1;
   cursor: pointer;
   overflow: hidden;
@@ -130,8 +150,9 @@ nav {
   transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#111), color-stop(#111), color-stop(#111), to(#9600b2));
-  background-image: linear-gradient(to bottom, #111, #111, #111, #9600b2);
+  background-image: -webkit-gradient(linear, right top, left top, from(#9600b2), to(rgba(0, 0, 0, 0)));
+  background-image: linear-gradient(to left, #9600b2, rgba(0, 0, 0, 0));
+  overflow: hidden;
 }
 
 #active {
@@ -205,12 +226,21 @@ nav {
 }
 
 @media screen and (max-width: 39.9375em) {
+  .nav-links {
+    top: 4em;
+  }
   .burger {
     top: 0.5em;
     right: 0.5em;
   }
   .nav-links li a {
     font-size: clamp(30px, 5vw, 80px);
+  }
+  .navlinks-active {
+    top: 1em;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#9600b2), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
+    background-image: linear-gradient(to top, #9600b2, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
   }
   .logo {
     margin-top: 0.4em;
