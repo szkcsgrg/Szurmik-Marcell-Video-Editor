@@ -57,6 +57,11 @@ html {
   padding-left: 1em;
 }
 
+.quote a {
+  color: #fff;
+  text-decoration: none;
+}
+
 .photos {
   padding-top: 3em;
   padding-bottom: 3em;
@@ -158,7 +163,7 @@ html {
 }
 
 .workwith {
-  height: 60vh;
+  height: 45vh;
   background-color: #111;
   background-image: url("../images/HomePage/Lines.png");
   background-position: center;
@@ -194,7 +199,7 @@ html {
       grid-column-start: 1;
   -ms-grid-row: 1;
       grid-row-start: 1;
-  width: clamp(300px, 60vw, 1200px);
+  width: clamp(300px, 70vw, 1300px);
 }
 
 .workwith .picons-holder {
@@ -208,7 +213,7 @@ html {
 }
 
 .workwith .picons-holder #programicons {
-  width: clamp(350px, 40vw, 550px);
+  width: clamp(350px, 40vw, 600px);
 }
 
 .workwith .grid-wrapper {
@@ -235,7 +240,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: clamp(350px, 50vw, 650px);
+  width: clamp(350px, 50vw, 700px);
 }
 
 .workwith .ccicons-holder a {
@@ -333,7 +338,7 @@ html {
       grid-template-rows: 40% 10% 50%;
 }
 
-.timelines {
+.grid-tvc .timelines {
   background-color: #333;
   -ms-grid-column: 1;
       grid-column-start: 1;
@@ -343,7 +348,7 @@ html {
   grid-row-end: 2;
 }
 
-.videos {
+.grid-tvc .videos {
   background-color: #9600b2;
   -ms-grid-column: 4;
       grid-column-start: 4;
@@ -353,7 +358,7 @@ html {
   grid-row-end: 3;
 }
 
-.contactme {
+.grid-tvc .contactme {
   background-color: #111;
   -ms-grid-column: 1;
       grid-column-start: 1;

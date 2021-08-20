@@ -28,6 +28,10 @@
     padding-right: 1em;
     padding-left: 1em;
   }
+  a {
+    color: $main-font-color;
+    text-decoration: none;
+  }
 }
 
 // Photos Screen
@@ -110,7 +114,7 @@
 
 // Work With Panel
 .workwith {
-  height: 60vh;
+  height: 45vh;
   background-color: $main-theme-color;
   background-image: url("../images/HomePage/Lines.png");
   background-position: center;
@@ -134,7 +138,7 @@
   #workwithimg {
     grid-column-start: 1;
     grid-row-start: 1;
-    width: clamp(300px, 60vw, 1200px);
+    width: clamp(300px, 70vw, 1300px);
   }
   .picons-holder {
     display: grid;
@@ -142,7 +146,7 @@
     grid-column-start: 1;
     grid-row-start: 2;
     #programicons {
-      width: clamp(350px, 40vw, 550px);
+      width: clamp(350px, 40vw, 600px);
     }
   }
   .grid-wrapper {
@@ -156,7 +160,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: clamp(350px, 50vw, 650px);
+    width: clamp(350px, 50vw, 700px);
   }
   .ccicons-holder a {
     margin-left: 0.5em;
@@ -228,29 +232,30 @@
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 40% 10% 50%;
+  .timelines {
+    background-color: $secondary-theme-color;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .videos {
+    background-color: $accent-theme-color;
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  .contactme {
+    background-color: $main-theme-color;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    z-index: -1;
+  }
 }
-.timelines {
-  background-color: $secondary-theme-color;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 1;
-  grid-row-end: 2;
-}
-.videos {
-  background-color: $accent-theme-color;
-  grid-column-start: 4;
-  grid-column-end: 6;
-  grid-row-start: 1;
-  grid-row-end: 3;
-}
-.contactme {
-  background-color: $main-theme-color;
-  grid-column-start: 1;
-  grid-column-end: 6;
-  grid-row-start: 2;
-  grid-row-end: 4;
-  z-index: -1;
-}
+
 @media screen and (max-width: $medium) {
   .grid-tvc {
     height: 300vh;
