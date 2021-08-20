@@ -29,7 +29,7 @@ html {
   place-items: center;
   background-image: url("../images/HomePage/VideoEditor.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   height: 100vh;
 }
 
@@ -53,9 +53,13 @@ html {
   text-align: center;
   font-family: "Taviraj", serif;
   font-style: italic;
+  padding-right: 1em;
+  padding-left: 1em;
 }
 
 .photos {
+  padding-top: 3em;
+  padding-bottom: 3em;
   padding-left: 10em;
   padding-right: 10em;
   height: 100vh;
@@ -85,21 +89,21 @@ html {
 .text-holder p {
   font-family: "Cabin", sans-serif;
   color: #fff;
-  font-size: clamp(23px, 3vw, 35px);
+  font-size: clamp(23px, 4vw, 35px);
 }
 
 .text-holder span a {
-  font-size: clamp(40px, 4vw, 60px);
+  font-size: clamp(40px, 3vw, 60px);
   text-decoration: none;
   color: #9600b2;
   font-weight: bold;
 }
 
-@media screen and (max-width: 39.9375em) {
+@media screen and (max-width: 71.8125em) {
   .photos {
     overflow: hidden;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 7em;
+    padding-right: 7em;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     -ms-grid-rows: 50% 50%;
@@ -111,11 +115,45 @@ html {
     -ms-grid-column: 1;
         grid-column-start: 1;
   }
+  .image-holder img {
+    width: clamp(300px, 60vw, 600px);
+  }
   .text-holder {
     -ms-grid-row: 2;
         grid-row-start: 2;
     -ms-grid-column: 1;
         grid-column-start: 1;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .photos {
+    height: 110vh;
+    overflow: hidden;
+    padding-left: 3em;
+    padding-right: 3em;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 40% 60%;
+        grid-template-rows: 40% 60%;
+  }
+  .image-holder {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+  .image-holder img {
+    width: clamp(350px, 30vw, 600px);
+  }
+  .text-holder {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+  }
+  .text-holder p {
+    font-size: clamp(23px, 1vw, 35px);
   }
 }
 
@@ -145,11 +183,9 @@ html {
       grid-column-start: 1;
   -ms-grid-row: 1;
       grid-row-start: 1;
-  z-index: 1;
 }
 
 .workwith img {
-  z-index: 0;
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-row: 1;
@@ -157,17 +193,60 @@ html {
   width: clamp(300px, 60vw, 1200px);
 }
 
+@media screen and (max-width: 71.8125em) {
+  .workwith {
+    height: 80vh;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 25% 32% 32%;
+        grid-template-rows: 25% 32% 32%;
+    padding-top: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .workwith h2 {
+    font-size: clamp(50px, 5vw, 75px);
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+  .workwith img {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    padding-top: 3em;
+    width: clamp(600px, 60vw, 1200px);
+  }
+}
+
 @media screen and (max-width: 39.9375em) {
   .workwith {
     height: 100vh;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 35% 32% 32%;
-        grid-template-rows: 35% 32% 32%;
-    padding-top: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
-    padding-bottom: 1em;
+    -ms-grid-rows: 25% 32% 32%;
+        grid-template-rows: 25% 32% 32%;
+    padding-top: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0;
+  }
+  .workwith h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+  }
+  .workwith img {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    padding-top: 3em;
+    width: clamp(350px, 60vw, 1200px);
   }
 }
 
@@ -357,6 +436,26 @@ nav {
           transform: rotate(45deg) translate(-8px, -6px);
 }
 
+@media screen and (max-width: 71.8125em) {
+  .navlinks-active {
+    top: 0;
+    width: 100%;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9600b2), to(rgba(0, 0, 0, 0)));
+    background-image: linear-gradient(to bottom, #9600b2, rgba(0, 0, 0, 0));
+  }
+  .nav-links li a {
+    font-size: clamp(30px, 5vw, 80px);
+  }
+  #twitterlogo {
+    width: 6%;
+    height: 6%;
+  }
+  #discordlogo {
+    width: 6%;
+    height: 6%;
+  }
+}
+
 @media screen and (max-width: 39.9375em) {
   .nav-links {
     top: 4em;
@@ -369,10 +468,10 @@ nav {
     font-size: clamp(30px, 5vw, 80px);
   }
   .navlinks-active {
-    top: 1em;
+    top: 0;
     width: 100%;
-    background-image: -webkit-gradient(linear, left bottom, left top, from(#9600b2), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0)));
-    background-image: linear-gradient(to top, #9600b2, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0));
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#9600b2), to(rgba(0, 0, 0, 0)));
+    background-image: linear-gradient(to bottom, #9600b2, rgba(0, 0, 0, 0));
   }
   .logo {
     margin-top: 0.4em;

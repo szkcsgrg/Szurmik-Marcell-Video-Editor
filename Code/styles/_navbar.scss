@@ -126,6 +126,25 @@ nav {
   transform: rotate(45deg) translate(-8px, -6px);
 }
 
+@media screen and (max-width: $medium) {
+  .navlinks-active {
+    top: 0;
+    width: 100%;
+    background-image: linear-gradient(to bottom, $accent-theme-color, $trans);
+  }
+  .nav-links li a {
+    font-size: clamp(30px, 5vw, 80px);
+  }
+  #twitterlogo {
+    width: 6%;
+    height: 6%;
+  }
+  #discordlogo {
+    width: 6%;
+    height: 6%;
+  }
+}
+
 @media screen and (max-width: $small) {
   .nav-links {
     top: 4em;
@@ -138,14 +157,9 @@ nav {
     font-size: clamp(30px, 5vw, 80px);
   }
   .navlinks-active {
-    top: 1em;
+    top: 0;
     width: 100%;
-    background-image: linear-gradient(
-      to top,
-      $accent-theme-color,
-      $trans,
-      $trans
-    );
+    background-image: linear-gradient(to bottom, $accent-theme-color, $trans);
   }
   .logo {
     margin-top: 0.4em;
@@ -163,8 +177,4 @@ nav {
     width: 7.5%;
     height: 7.5%;
   }
-}
-@media screen and (max-width: $medium) {
-}
-@media screen and (max-width: $large) {
 }

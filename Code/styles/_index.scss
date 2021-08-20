@@ -4,7 +4,7 @@
   place-items: center;
   background-image: url("../images/HomePage/VideoEditor.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
   height: 100vh;
   h1 {
     font-size: clamp(125px, 9vw, 250px);
@@ -13,6 +13,7 @@
     font-family: $main-font;
   }
 }
+
 // Quote Panel
 .quote {
   height: 15vh;
@@ -24,11 +25,15 @@
     text-align: center;
     font-family: $secondary-font;
     font-style: italic;
+    padding-right: 1em;
+    padding-left: 1em;
   }
 }
 
 // Photos Screen
 .photos {
+  padding-top: 3em;
+  padding-bottom: 3em;
   padding-left: 10em;
   padding-right: 10em;
   height: 100vh;
@@ -49,30 +54,57 @@
   p {
     font-family: $main-font;
     color: $main-font-color;
-    font-size: clamp(23px, 3vw, 35px);
+    font-size: clamp(23px, 4vw, 35px);
   }
   span a {
-    font-size: clamp(40px, 4vw, 60px);
+    font-size: clamp(40px, 3vw, 60px);
     text-decoration: none;
     color: $accent-theme-color;
     font-weight: bold;
   }
 }
-@media screen and (max-width: $small) {
+@media screen and (max-width: $medium) {
   .photos {
     overflow: hidden;
-    padding-left: 3em;
-    padding-right: 3em;
+    padding-left: 7em;
+    padding-right: 7em;
     grid-template-columns: 100%;
     grid-template-rows: 50% 50%;
   }
   .image-holder {
     grid-row-start: 1;
     grid-column-start: 1;
+    img {
+      width: clamp(300px, 60vw, 600px);
+    }
   }
   .text-holder {
     grid-row-start: 2;
     grid-column-start: 1;
+  }
+}
+@media screen and (max-width: $small) {
+  .photos {
+    height: 110vh;
+    overflow: hidden;
+    padding-left: 3em;
+    padding-right: 3em;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 60%;
+  }
+  .image-holder {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+  .image-holder img {
+    width: clamp(350px, 30vw, 600px);
+  }
+  .text-holder {
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+  .text-holder p {
+    font-size: clamp(23px, 1vw, 35px);
   }
 }
 
@@ -94,23 +126,53 @@
     font-size: clamp(28px, 3vw, 45px);
     grid-column-start: 1;
     grid-row-start: 1;
-    z-index: 1;
   }
   img {
-    z-index: 0;
     grid-column-start: 1;
     grid-row-start: 1;
     width: clamp(300px, 60vw, 1200px);
+  }
+}
+@media screen and (max-width: $medium) {
+  .workwith {
+    height: 80vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 32% 32%;
+    padding-top: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+  }
+  .workwith h2 {
+    font-size: clamp(50px, 5vw, 75px);
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .workwith img {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding-top: 3em;
+    width: clamp(600px, 60vw, 1200px);
   }
 }
 @media screen and (max-width: $small) {
   .workwith {
     height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 35% 32% 32%;
-    padding-top: 1em;
-    padding-left: 3em;
-    padding-right: 3em;
-    padding-bottom: 1em;
+    grid-template-rows: 25% 32% 32%;
+    padding-top: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 0;
+  }
+  .workwith h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  .workwith img {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding-top: 3em;
+    width: clamp(350px, 60vw, 1200px);
   }
 }
