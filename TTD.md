@@ -21,9 +21,9 @@
 - Itemprop for each elements
 - Screens
   - Navbar ✅
-  - Landing Screen
-  - Quote Screen
-  - Photos Screen
+  - Landing Screen✅
+  - Quote Screen✅
+  - Photos Screen✅
   - Work With Screen
   - Timelines Screen
   - Videos Screen
@@ -38,7 +38,7 @@
 
 ## Bugs
 
-- Bigger Landing Screen Image
+- Bigger Landing Screen Image✅
 - Zoom out.
 - Small device overflow-x hidden ✅
 - Links display none ✅

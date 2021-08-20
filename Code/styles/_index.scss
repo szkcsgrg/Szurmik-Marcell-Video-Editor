@@ -112,6 +112,10 @@
 .workwith {
   height: 60vh;
   background-color: $main-theme-color;
+  background-image: url("../images/HomePage/Lines.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
   align-items: center;
   grid-template-columns: 50% 50%;
@@ -127,41 +131,74 @@
     grid-column-start: 1;
     grid-row-start: 1;
   }
-  img {
+  #workwithimg {
     grid-column-start: 1;
     grid-row-start: 1;
     width: clamp(300px, 60vw, 1200px);
   }
+  .picons-holder {
+    display: grid;
+    place-items: center;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    #programicons {
+      width: clamp(350px, 40vw, 550px);
+    }
+  }
+  .grid-wrapper {
+    display: grid;
+    place-items: center;
+    grid-column-start: 2;
+    grid-row-start: 2;
+  }
+  .ccicons-holder {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: clamp(350px, 50vw, 650px);
+  }
+  .ccicons-holder a {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    border-radius: 20px;
+  }
 }
 @media screen and (max-width: $medium) {
   .workwith {
-    height: 80vh;
     grid-template-columns: 100%;
-    grid-template-rows: 25% 32% 32%;
+    grid-template-rows: 25% 37% 37%;
     padding-top: 0;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 5em;
+    padding-right: 5em;
   }
   .workwith h2 {
     font-size: clamp(50px, 5vw, 75px);
-    grid-column-start: 1;
     grid-row-start: 1;
+    grid-column-start: 1;
   }
-  .workwith img {
+  .workwith #workwithimg {
     grid-column-start: 1;
     grid-row-start: 1;
     padding-top: 3em;
     width: clamp(600px, 60vw, 1200px);
   }
+  .workwith .picons-holder {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .workwith .grid-wrapper {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
 }
 @media screen and (max-width: $small) {
   .workwith {
-    height: 100vh;
     grid-template-columns: 100%;
-    grid-template-rows: 25% 32% 32%;
+    grid-template-rows: 25% 37% 37%;
     padding-top: 0;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
     padding-bottom: 0;
   }
   .workwith h2 {
@@ -169,10 +206,73 @@
     grid-column-start: 1;
     grid-row-start: 1;
   }
-  .workwith img {
+  .workwith #workwithimg {
     grid-column-start: 1;
     grid-row-start: 1;
     padding-top: 3em;
     width: clamp(350px, 60vw, 1200px);
+  }
+  .workwith .picons-holder {
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  .workwith .grid-wrapper {
+    grid-column-start: 1;
+    grid-row-start: 3;
+  }
+}
+
+// Timelines & Videos & Contact Me
+.grid-tvc {
+  height: 200vh;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 40% 10% 50%;
+}
+.timelines {
+  background-color: $secondary-theme-color;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+.videos {
+  background-color: $accent-theme-color;
+  grid-column-start: 4;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.contactme {
+  background-color: $main-theme-color;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  grid-row-start: 2;
+  grid-row-end: 4;
+  z-index: -1;
+}
+@media screen and (max-width: $medium) {
+  .grid-tvc {
+    height: 300vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 33% 34% 33%;
+  }
+  .timelines {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .videos {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .contactme {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row-start: 4;
+    grid-row-end: 5;
   }
 }
