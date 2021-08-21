@@ -19,15 +19,23 @@
 
 - Basic Structure ✅
 - Itemprop for each elements
-- Screens
-  - Navbar ✅
+- Home Page
+  - Navbar✅
   - Landing Screen✅
   - Quote Screen✅
   - Photos Screen✅
-  - Work With Screen
+  - Work With Screen✅
   - Timelines Screen
   - Videos Screen
   - Contac Me Screen
+  - Footer
+- About Page
+  - Navbar✅
+  - About Screen
+  - Videos Screen
+  - Timelines Screen
+  - Photos Screen
+  - Contact Me Screen
   - Footer
 
 <br />
@@ -36,7 +44,7 @@
 
 <br />
 
-## Bugs
+## Bugs I had to manage
 
 - Bigger Landing Screen Image✅
 - Zoom out.
