@@ -690,8 +690,8 @@ footer .icon-holder {
       grid-row-start: 1;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 80% 10% 10%;
-      grid-template-columns: 80% 10% 10%;
+  -ms-grid-columns: 90% 5% 5%;
+      grid-template-columns: 90% 5% 5%;
   place-items: center;
 }
 
@@ -707,6 +707,17 @@ footer .twitter {
           flex-direction: row;
 }
 
+footer .twitter a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Cabin", sans-serif;
+}
+
+footer .twitter #twitterlogo {
+  width: 1.5em;
+  height: 1.5em;
+}
+
 footer .discord {
   -ms-grid-column: 3;
       grid-column-start: 3;
@@ -717,4 +728,15 @@ footer .discord {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+footer .discord a {
+  text-decoration: none;
+  color: #fff;
+  font-family: "Cabin", sans-serif;
+}
+
+footer .discord #discordlogo {
+  width: 1.5em;
+  height: 1.5em;
 }
