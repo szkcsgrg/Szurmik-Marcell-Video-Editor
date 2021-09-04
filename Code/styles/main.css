@@ -240,7 +240,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: clamp(350px, 50vw, 700px);
+  width: clamp(300px, 40vw, 500px);
 }
 
 .workwith .ccicons-holder a {
@@ -251,6 +251,7 @@ html {
 
 @media screen and (max-width: 71.8125em) {
   .workwith {
+    height: 35vh;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     -ms-grid-rows: 25% 37% 37%;
@@ -290,6 +291,7 @@ html {
 
 @media screen and (max-width: 39.9375em) {
   .workwith {
+    height: 40vh;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     -ms-grid-rows: 25% 37% 37%;
@@ -377,7 +379,7 @@ html {
     -ms-grid-rows: 33% 34% 33%;
         grid-template-rows: 33% 34% 33%;
   }
-  .timelines {
+  .grid-tvc .timelines {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 1;
@@ -385,7 +387,7 @@ html {
         grid-row-start: 1;
     grid-row-end: 2;
   }
-  .videos {
+  .grid-tvc .videos {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 1;
@@ -393,7 +395,7 @@ html {
         grid-row-start: 2;
     grid-row-end: 3;
   }
-  .contactme {
+  .grid-tvc .contactme {
     -ms-grid-column: 1;
         grid-column-start: 1;
     grid-column-end: 1;
@@ -658,16 +660,17 @@ footer {
 }
 
 footer .text-holder {
-  padding-left: 0.5em;
+  padding-left: 2em;
   -ms-grid-column: 1;
       grid-column-start: 1;
   -ms-grid-row: 1;
       grid-row-start: 1;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 80% 20%;
-      grid-template-columns: 80% 20%;
-  place-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer .text-holder p {
@@ -683,7 +686,7 @@ footer .text-holder a {
 }
 
 footer .icon-holder {
-  padding-right: 1em;
+  padding-right: 2em;
   -ms-grid-column: 2;
       grid-column-start: 2;
   -ms-grid-row: 1;
@@ -693,6 +696,8 @@ footer .icon-holder {
   -ms-grid-columns: 90% 5% 5%;
       grid-template-columns: 90% 5% 5%;
   place-items: center;
+  -webkit-column-gap: 0.3vh;
+          column-gap: 0.3vh;
 }
 
 footer .twitter {
@@ -714,8 +719,8 @@ footer .twitter a {
 }
 
 footer .twitter #twitterlogo {
-  width: 1.5em;
-  height: 1.5em;
+  width: clamp(25px, 3vw, 40px);
+  height: clamp(25px, 3vw, 40px);
 }
 
 footer .discord {
@@ -737,6 +742,46 @@ footer .discord a {
 }
 
 footer .discord #discordlogo {
-  width: 1.5em;
-  height: 1.5em;
+  width: clamp(25px, 3vw, 40px);
+  height: clamp(25px, 3vw, 40px);
+}
+
+@media screen and (max-width: 71.8125em) {
+  footer .text-holder {
+    padding-left: 1em;
+  }
+  footer .icon-holder {
+    padding-right: 1em;
+    -ms-grid-columns: 80% 10% 10%;
+        grid-template-columns: 80% 10% 10%;
+    -webkit-column-gap: 0;
+            column-gap: 0;
+  }
+  .twitter #twitterlogo {
+    width: clamp(35px, 4vw, 50px);
+    height: clamp(35px, 4vw, 50px);
+  }
+  .discord #discordlogo {
+    width: clamp(35px, 4vw, 50px);
+    height: clamp(35px, 4vw, 50px);
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  footer .text-holder {
+    padding-left: 0.5em;
+  }
+  footer .icon-holder {
+    padding-right: 2em;
+    -webkit-column-gap: 1vh;
+            column-gap: 1vh;
+  }
+  .twitter #twitterlogo {
+    width: clamp(35px, 4vw, 50px);
+    height: clamp(35px, 4vw, 50px);
+  }
+  .discord #discordlogo {
+    width: clamp(35px, 4vw, 50px);
+    height: clamp(35px, 4vw, 50px);
+  }
 }

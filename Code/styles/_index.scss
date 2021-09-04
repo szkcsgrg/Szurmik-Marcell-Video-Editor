@@ -160,7 +160,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: clamp(350px, 50vw, 700px);
+    width: clamp(300px, 40vw, 500px);
   }
   .ccicons-holder a {
     margin-left: 0.5em;
@@ -170,6 +170,7 @@
 }
 @media screen and (max-width: $medium) {
   .workwith {
+    height: 35vh;
     grid-template-columns: 100%;
     grid-template-rows: 25% 37% 37%;
     padding-top: 0;
@@ -198,6 +199,7 @@
 }
 @media screen and (max-width: $small) {
   .workwith {
+    height: 40vh;
     grid-template-columns: 100%;
     grid-template-rows: 25% 37% 37%;
     padding-top: 0;
@@ -262,19 +264,19 @@
     grid-template-columns: 100%;
     grid-template-rows: 33% 34% 33%;
   }
-  .timelines {
+  .grid-tvc .timelines {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 1;
     grid-row-end: 2;
   }
-  .videos {
+  .grid-tvc .videos {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 2;
     grid-row-end: 3;
   }
-  .contactme {
+  .grid-tvc .contactme {
     grid-column-start: 1;
     grid-column-end: 1;
     grid-row-start: 4;
