@@ -27,7 +27,7 @@ html {
   display: -ms-grid;
   display: grid;
   place-items: center;
-  background-image: url("../images/HomePage/VideoEditor.png");
+  background-image: url("../images/HomePage/Others/VideoEditor.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -68,7 +68,7 @@ html {
   padding-left: 10em;
   padding-right: 10em;
   height: 100vh;
-  background-color: #333;
+  background-color: #2f2d2f;
   display: -ms-grid;
   display: grid;
   place-items: center;
@@ -165,7 +165,7 @@ html {
 .workwith {
   height: 45vh;
   background-color: #111;
-  background-image: url("../images/HomePage/Lines.png");
+  background-image: url("../images/HomePage/Others/Lines.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -331,26 +331,131 @@ html {
 }
 
 .grid-tvc {
+  overflow: hidden;
   height: 200vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20% 20% 20% 20% 20%;
       grid-template-columns: 20% 20% 20% 20% 20%;
-  -ms-grid-rows: 40% 10% 50%;
-      grid-template-rows: 40% 10% 50%;
+  -ms-grid-rows: 50% 10% 40%;
+      grid-template-rows: 50% 10% 40%;
+}
+
+.grid-tvc #img-text {
+  overflow: hidden;
+  width: clamp(300px, 60vw, 1200px);
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  padding-top: 2em;
+  padding-left: 2em;
+}
+
+.grid-tvc h2 {
+  overflow: hidden;
+  color: #fff;
+  font-family: "Cabin", sans-serif;
+  font-size: clamp(28px, 3vw, 45px);
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  padding-top: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-bottom: 2em;
+}
+
+.grid-tvc .center {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 4;
+      grid-row-start: 4;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.4em;
+}
+
+.grid-tvc .button {
+  border-radius: 2em;
+  background-color: #111;
+  height: 4em;
+  width: 10em;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.grid-tvc h3 {
+  font-family: "Cabin", sans-serif;
+  color: #fff;
+  font-size: clamp(20px, 3vw, 35px);
+}
+
+.grid-tvc a {
+  color: #9600b2;
+  text-decoration: none;
+}
+
+.grid-tvc a:hover {
+  text-decoration: underline;
 }
 
 .grid-tvc .timelines {
-  background-color: #333;
+  overflow: hidden;
+  background-color: #2f2d2f;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
   -ms-grid-row: 1;
       grid-row-start: 1;
   grid-row-end: 2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 25% 35% 30% 10%;
+      grid-template-rows: 25% 35% 30% 10%;
+}
+
+.grid-tvc .timeline-images {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 4;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+.grid-tvc #timeline-img1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  overflow: hidden;
+  width: clamp(500px, 70vw, 800px);
+  height: auto;
+}
+
+.grid-tvc #timeline-img2 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  overflow: hidden;
+  width: clamp(500px, 70vw, 800px);
+  height: auto;
 }
 
 .grid-tvc .videos {
+  overflow: hidden;
   background-color: #9600b2;
   -ms-grid-column: 4;
       grid-column-start: 4;
@@ -358,9 +463,39 @@ html {
   -ms-grid-row: 1;
       grid-row-start: 1;
   grid-row-end: 3;
+  z-index: 1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 20% 35% 30% 15%;
+      grid-template-rows: 20% 35% 30% 15%;
+}
+
+.grid-tvc .videos-links {
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 4;
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 50% 50%;
+      grid-template-rows: 50% 50%;
+}
+
+.grid-tvc .videos-links :nth-child(1) {
+  width: clamp(150px, 80vw, 560px);
+}
+
+.grid-tvc .videos-links :nth-child(2) {
+  width: clamp(100px, 80vw, 560px);
 }
 
 .grid-tvc .contactme {
+  overflow: hidden;
   background-color: #111;
   -ms-grid-column: 1;
       grid-column-start: 1;
@@ -368,7 +503,159 @@ html {
   -ms-grid-row: 2;
       grid-row-start: 2;
   grid-row-end: 4;
-  z-index: -1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 20% 80%;
+      grid-template-rows: 20% 80%;
+}
+
+.grid-tvc .email-form {
+  overflow: hidden;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  place-items: center;
+  margin-top: 10em;
+  margin-left: 10em;
+  margin-right: 5em;
+}
+
+.grid-tvc form {
+  overflow: hidden;
+  display: -ms-grid;
+  display: grid;
+  height: 80vh;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 10% 10% 10% 10% 10%;
+      grid-template-rows: 10% 10% 10% 10% 10%;
+}
+
+.grid-tvc form h1 {
+  font-family: "Cabin", sans-serif;
+  color: #fff;
+  font-size: clamp(28px, 3vw, 45px);
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+}
+
+.grid-tvc form #name {
+  margin-left: 0.1em;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  padding: 8px;
+  padding-left: 0;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: 1.35rem;
+  color: #fff;
+  background-color: #111;
+  width: 90%;
+  height: 90%;
+}
+
+.grid-tvc form #email {
+  margin-left: 0.1em;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  padding: 8px;
+  padding-left: 0;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: 1.35rem;
+  color: #fff;
+  background-color: #111;
+  width: 90%;
+  height: 90%;
+}
+
+.grid-tvc form #message {
+  margin-left: 0.1em;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 4;
+      grid-row-start: 4;
+  padding: 8px;
+  padding-left: 0;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: 1.35rem;
+  color: #fff;
+  background-color: #111;
+  width: 90%;
+  height: 90%;
+}
+
+.grid-tvc form #btn {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-row: 5;
+      grid-row-start: 5;
+  background-color: #fff;
+  color: #111;
+  height: 4em;
+  width: 10em;
+  border-radius: 2em;
+  margin-top: 3em;
+  border-style: none;
+}
+
+.grid-tvc form span {
+  font-family: "Cabin", sans-serif;
+  color: #111;
+  font-size: clamp(20px, 3vw, 35px);
+}
+
+.grid-tvc .others {
+  margin-top: 3em;
+  overflow: hidden;
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.grid-tvc .mail {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  -ms-grid-rows: 15% 15%;
+      grid-template-rows: 15% 15%;
+}
+
+.grid-tvc .mail p {
+  font-family: "Cabin", sans-serif;
+  color: #fff;
+  opacity: 0.5;
+  font-size: clamp(25px, 3vw, 35px);
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+}
+
+.grid-tvc .mail h2 {
+  font-family: "Cabin", sans-serif;
+  color: #fff;
+  font-size: clamp(28px, 3vw, 45px);
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  font-weight: lighter;
 }
 
 @media screen and (max-width: 71.8125em) {
@@ -402,6 +689,56 @@ html {
     -ms-grid-row: 4;
         grid-row-start: 4;
     grid-row-end: 5;
+  }
+  .grid-tvc h2 {
+    font-size: clamp(50px, 5vw, 75px);
+  }
+  .grid-tvc #img-text {
+    width: clamp(600px, 60vw, 1200px);
+  }
+  .grid-tvc #timeline-img1 {
+    width: clamp(500px, 90vw, 800px);
+  }
+  .grid-tvc #timeline-img2 {
+    width: clamp(500px, 90vw, 800px);
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .grid-tvc {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 25% 35% 40%;
+        grid-template-rows: 25% 35% 40%;
+  }
+  .grid-tvc .timelines {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    -ms-grid-rows: 20% 40% 20%;
+        grid-template-rows: 20% 40% 20%;
+  }
+  .grid-tvc .timelines .timeline-images {
+    -ms-grid-row: 2;
+        grid-row-start: 2;
+    grid-row-end: 4;
+    padding-top: 2em;
+  }
+  .grid-tvc h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    padding-left: 0.5em;
+  }
+  .grid-tvc #img-text {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    padding-top: 5em;
+    padding-left: 0.5em;
+    width: clamp(350px, 60vw, 1200px);
   }
 }
 
@@ -649,7 +986,7 @@ nav {
 
 footer {
   height: 12vh;
-  background-color: #333;
+  background-color: #2f2d2f;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 50%;

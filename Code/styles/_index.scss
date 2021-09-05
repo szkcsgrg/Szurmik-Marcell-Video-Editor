@@ -2,7 +2,7 @@
 .lanindingscreen {
   display: grid;
   place-items: center;
-  background-image: url("../images/HomePage/VideoEditor.png");
+  background-image: url("../images/HomePage/Others/VideoEditor.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -116,7 +116,7 @@
 .workwith {
   height: 45vh;
   background-color: $main-theme-color;
-  background-image: url("../images/HomePage/Lines.png");
+  background-image: url("../images/HomePage/Others/Lines.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -230,31 +230,259 @@
 
 // Timelines & Videos & Contact Me
 .grid-tvc {
+  overflow: hidden;
   height: 200vh;
   display: grid;
   grid-template-columns: 20% 20% 20% 20% 20%;
-  grid-template-rows: 40% 10% 50%;
+  grid-template-rows: 50% 10% 40%;
+
+  //The big text behind  a small text.
+  #img-text {
+    overflow: hidden;
+    width: clamp(300px, 60vw, 1200px);
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding-top: 2em;
+    padding-left: 2em;
+  }
+  //Small text
+  h2 {
+    overflow: hidden;
+    color: $main-font-color;
+    font-family: $main-font;
+    font-size: clamp(28px, 3vw, 45px);
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding-top: 2em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+  }
+
+  //Button on the bottom.
+  .center {
+    grid-column-start: 1;
+    grid-row-start: 4;
+    //------------------------------------------------//
+    display: grid;
+    place-items: center;
+    margin-bottom: 0.4em;
+  }
+  .button {
+    border-radius: 2em;
+    background-color: $main-theme-color;
+    height: 4em;
+    width: 10em;
+    //------------------------------------------------//
+    display: grid;
+    place-items: center;
+  }
+  h3 {
+    font-family: $main-font;
+    color: $main-font-color;
+    font-size: clamp(20px, 3vw, 35px);
+  }
+  a {
+    color: $accent-theme-color;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+
+  //Timelines
   .timelines {
+    overflow: hidden;
     background-color: $secondary-theme-color;
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    //  --------------------------------------------- //
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 35% 30% 10%;
   }
+  .timeline-images {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+  #timeline-img1 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    overflow: hidden;
+    width: clamp(500px, 70vw, 800px);
+    height: auto;
+  }
+  #timeline-img2 {
+    grid-column-start: 1;
+    grid-row-start: 2;
+    overflow: hidden;
+    width: clamp(500px, 70vw, 800px);
+    height: auto;
+  }
+
+  //Videos
   .videos {
+    overflow: hidden;
     background-color: $accent-theme-color;
     grid-column-start: 4;
     grid-column-end: 6;
     grid-row-start: 1;
     grid-row-end: 3;
+    z-index: 1;
+    //  --------------------------------------------- //
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 35% 30% 15%;
   }
+  .videos-links {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 100%;
+    grid-template-rows: 50% 50%;
+  }
+  .videos-links :nth-child(1) {
+    width: clamp(150px, 80vw, 560px);
+  }
+  .videos-links :nth-child(2) {
+    width: clamp(100px, 80vw, 560px);
+  }
+
+  //Contact Me
   .contactme {
+    overflow: hidden;
     background-color: $main-theme-color;
     grid-column-start: 1;
     grid-column-end: 6;
     grid-row-start: 2;
     grid-row-end: 4;
-    z-index: -1;
+    //  --------------------------------------------- //
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 80%;
+  }
+  .email-form {
+    overflow: hidden;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    place-items: center;
+    margin-top: 10em;
+    margin-left: 10em;
+    margin-right: 5em;
+  }
+  form {
+    overflow: hidden;
+    display: grid;
+    height: 80vh;
+    grid-template-columns: 100%;
+    grid-template-rows: 10% 10% 10% 10% 10%;
+  }
+  form h1 {
+    font-family: $main-font;
+    color: $main-font-color;
+    font-size: clamp(28px, 3vw, 45px);
+    grid-column-start: 1;
+    grid-row-start: 1;
+  }
+  form #name {
+    margin-left: 0.1em;
+    grid-column-start: 1;
+    grid-row-start: 2;
+    padding: 8px;
+    padding-left: 0;
+    display: block;
+    border: none;
+    border-bottom: 1px solid $main-font-color;
+    font-size: 1.35rem;
+    color: $main-font-color;
+    background-color: $main-theme-color;
+    width: 90%;
+    height: 90%;
+  }
+  form #email {
+    margin-left: 0.1em;
+    grid-column-start: 1;
+    grid-row-start: 3;
+    padding: 8px;
+    padding-left: 0;
+    display: block;
+    border: none;
+    border-bottom: 1px solid $main-font-color;
+    font-size: 1.35rem;
+    color: $main-font-color;
+    background-color: $main-theme-color;
+    width: 90%;
+    height: 90%;
+  }
+  form #message {
+    margin-left: 0.1em;
+    grid-column-start: 1;
+    grid-row-start: 4;
+    padding: 8px;
+    padding-left: 0;
+    display: block;
+    border: none;
+    border-bottom: 1px solid $main-font-color;
+    font-size: 1.35rem;
+    color: $main-font-color;
+    background-color: $main-theme-color;
+    width: 90%;
+    height: 90%;
+  }
+  form #btn {
+    grid-column-start: 1;
+    grid-row-start: 5;
+    background-color: $main-font-color;
+    color: $secondary-font-color;
+    height: 4em;
+    width: 10em;
+    border-radius: 2em;
+    margin-top: 3em;
+    border-style: none;
+  }
+  form span {
+    font-family: $main-font;
+    color: $secondary-font-color;
+    font-size: clamp(20px, 3vw, 35px);
+  }
+  .others {
+    margin-top: 3em;
+    overflow: hidden;
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    //----------------------//
+    display: grid;
+    place-items: center;
+  }
+  .mail {
+    display: grid;
+    place-items: center;
+    grid-template-rows: 15% 15%;
+  }
+  .mail p {
+    font-family: $main-font;
+    color: $main-font-color;
+    opacity: 0.5;
+    font-size: clamp(25px, 3vw, 35px);
+    grid-row-start: 1;
+  }
+  .mail h2 {
+    font-family: $main-font;
+    color: $main-font-color;
+    font-size: clamp(28px, 3vw, 45px);
+    grid-row-start: 2;
+    font-weight: lighter;
   }
 }
 
@@ -281,5 +509,45 @@
     grid-column-end: 1;
     grid-row-start: 4;
     grid-row-end: 5;
+  }
+  .grid-tvc h2 {
+    font-size: clamp(50px, 5vw, 75px);
+  }
+  .grid-tvc #img-text {
+    width: clamp(600px, 60vw, 1200px);
+  }
+  .grid-tvc #timeline-img1 {
+    width: clamp(500px, 90vw, 800px);
+  }
+  .grid-tvc #timeline-img2 {
+    width: clamp(500px, 90vw, 800px);
+  }
+}
+@media screen and (max-width: $small) {
+  .grid-tvc {
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 35% 40%;
+  }
+  .grid-tvc .timelines {
+    grid-row-start: 1;
+    grid-template-rows: 20% 40% 20%;
+  }
+  .grid-tvc .timelines .timeline-images {
+    grid-row-start: 2;
+    grid-row-end: 4;
+    padding-top: 2em;
+  }
+  .grid-tvc h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding-left: 0.5em;
+  }
+  .grid-tvc #img-text {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    padding-top: 5em;
+    padding-left: 0.5em;
+    width: clamp(350px, 60vw, 1200px);
   }
 }
