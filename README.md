@@ -20,4 +20,4 @@ He is a video editor and want to use a Dark and Purple theme. <br />
 
 ## Licence & Copyright
 
-© [Szakács Gergő](https://smoketmg.hu/), Korsotea
+© [Szakács Gergő](https://smoketmg.hu/), Szurmik Marcell
