@@ -509,6 +509,10 @@
     grid-column-end: 1;
     grid-row-start: 4;
     grid-row-end: 5;
+    //---------------------------//
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 60% 20%;
   }
   .grid-tvc h2 {
     font-size: clamp(50px, 5vw, 75px);
@@ -521,6 +525,25 @@
   }
   .grid-tvc #timeline-img2 {
     width: clamp(500px, 90vw, 800px);
+  }
+  .grid-tvc .contactme #img-text,
+  h2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  .grid-tvc .contactme .email-form {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  .grid-tvc .contactme .others {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
   }
 }
 @media screen and (max-width: $small) {
