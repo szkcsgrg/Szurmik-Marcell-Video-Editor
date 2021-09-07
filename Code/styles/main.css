@@ -391,7 +391,7 @@ html {
 .grid-tvc h3 {
   font-family: "Cabin", sans-serif;
   color: #fff;
-  font-size: clamp(20px, 3vw, 35px);
+  font-size: clamp(20px, 3vw, 30px);
 }
 
 .grid-tvc a {
@@ -616,7 +616,7 @@ html {
 .grid-tvc form span {
   font-family: "Cabin", sans-serif;
   color: #111;
-  font-size: clamp(20px, 3vw, 35px);
+  font-size: clamp(20px, 3vw, 30px);
 }
 
 .grid-tvc .others {
@@ -724,6 +724,7 @@ html {
     -ms-grid-row: 2;
         grid-row-start: 2;
     grid-row-end: 3;
+    margin: 0;
   }
   .grid-tvc .contactme .others {
     -ms-grid-column: 1;
@@ -732,6 +733,7 @@ html {
     -ms-grid-row: 3;
         grid-row-start: 3;
     grid-row-end: 4;
+    margin-top: 0;
   }
 }
 
