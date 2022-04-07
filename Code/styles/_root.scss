@@ -1,7 +1,17 @@
-::-webkit-scrollbar {
-  display: none;
+html,
+body {
+  background-color: $main-color;
+  color: $font-color;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  font-family: $font;
+  transition: background-color 1s ease-in-out;
 }
-* {
+.container-fluid {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,8 +19,53 @@
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
 }
-html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  background-color: $main-theme-color;
+::-webkit-scrollbar {
+  display: none;
+}
+
+#button {
+  margin-top: 1em;
+  background-color: $accent-color;
+  color: $font-color;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+#button:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+.text-wrap {
+  h1 {
+    font-size: 3rem;
+    font-size: clamp(3rem, 0.95rem + 0.25vw, 1.25rem);
+  }
+  h1 span {
+    font-weight: bold;
+    color: $accent-color;
+  }
+  h2 {
+    font-size: clamp(0.5rem, 1rem + 10vw, 2rem);
+  }
+}
+.text-wrap,
+.button-wrap {
+  transition: all 1s ease-in-out;
+  p {
+    font-size: clamp(1.25rem, 0.5rem + 0.5vw, 1.5rem);
+  }
+  a {
+    color: $accent-color;
+    text-decoration: none;
+    font-size: clamp(1.25rem, 0.5rem + 0.5vw, 1.5rem);
+  }
+  span {
+    color: $accent-color;
+  }
+}
+.accent span {
+  color: $accent-color;
+  font-weight: bold;
+}
+.text-wrap p a:hover {
+  text-decoration: underline;
 }
