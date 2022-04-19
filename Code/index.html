@@ -5,7 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/logo.png" type="image/x-icon">
+    <meta name="robots" content="index, follow">
     <title>Szurmik Marcell - Video Editor</title>
+    <meta name="og:title" content="Szurmik Marcell - Video Editor">
+    <meta name="og:type" content="article">
+    <meta name="url" content="">
+    <meta name="description" content="">
+    <meta name="og:description" content="">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@korso">
+    <meta name="twitter:title" content="Szurmik Marcell - Video Editor">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="images/logo.png">
+
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -13,118 +27,124 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
 
     <!-- Css -->
     <link rel="stylesheet" href="styles/main.css">
 
+
+    <script src="scripts/copydc.js"></script>
+
 </head>
 
 <body>
+    <main role="main">
     <!-- Container Start -->
-    <div class="conatiner-fluid">
+    <article class="conatiner-fluid" itemscope itemtype="https://schema.org/Person">
 
         <!-- Navbar Start -->
-
+        <nav class="d-flex justify-content-between align-items-center navigation">
+            <div class="burger burger-active" onclick="burgerO()"> 
+                <span id="line1"></span>
+                <span id="line2"></span>
+            </div>
+            <div class="navigation-menu row d-none">
+                <div class="col-12 d-flex justify-content-center align-items-start">
+                    <ul class="d-flex flex-column align-items-center">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Navbar End -->
+    
         <!-- Navbar End -->
 
         <!-- Home Welcome Start -->
-        <div class="row home-welcome align-items-center">
+        <section class="row home-welcome align-items-center">
             <div class="col-12 align-items-center d-flex justify-content-center flex-column">
                 <h1>Video Editor</h1>
             </div>
-        </div>
+        </section>
         <!-- Home Welcome End -->
 
         <!-- Quote Start -->
-        <div class="row home-quote align-items-center ">
+        <section class="row home-quote align-items-center ">
             <div class="col-12 align-items-center d-flex justify-content-center text-wrap">
                 <span>"</span>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sapiente consequuntur possimus obcaecati
                     incidunt dolore tempore?</p>
             </div>
-        </div>
+        </section>
         <!-- Quote End -->
 
         <!-- Short Introduction Start -->
-        <div class="row home-introduction align-items-center d-flex justify-content-center">
+        <section class="row home-introduction align-items-center d-flex justify-content-center" id="about">
             <div class="col-12 col-lg-6 align-items-center d-flex justify-content-center">
-                <img src="images/Photos.png" alt="" id="home-introduction">
+                <img src="images/Photos.png" alt="One of his Photo that you can see on Instagram." id="home-introduction" itemprop="image">
             </div>
-            <div class="col-12 col-lg-6 text-wrap align-items-center d-flex justify-content-center flex-column">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero iusto sunt blanditiis aliquid quae,
+            <div class="col-12 col-lg-6 text-wrap align-items-center d-flex justify-content-center flex-column" itemprop="description">
+                <p itemprop="name">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero iusto sunt blanditiis aliquid quae,
                     recusandae consequatur facilis quaerat aspernatur quam!</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero iusto sunt blanditiis aliquid quae,
                     recusandae consequatur facilis quaerat aspernatur quam!</p>
-                <p><a href="" id="button">Read more</a></p>
+                <p> Photos of ur mom can be found on my <a href="https://www.instagram.com/marci_szurmik/" target="_blank"><span>Instagram</span></a></p>
+                
             </div>
-        </div>
+        </section>
         <!-- Short Introduction End -->
 
         <!-- Projects Start -->
-        <div class="row home-projects aling-items-center d-flex jusifty-content-center flex-column flex-md-row">
-            <!-- Project 1 Start -->
-            <div class="col-12 col-md-6 project aling-items-center">
-                <div class="col-12 text-wrap accent">
-                    <h2>Video Title</h2>
-                    <a href="#"><span>Video owner</span></a>
-                </div>
-                <a href="" class="col-12">
-                    <img src="images/sample.jpeg" alt="" id="home-project1">
-                </a>
+        <section id="projects" class="row home-projects align-items-center d-flex justify-content-evenly flex-column flex-md-row" >
+            <div class="row text-wrap">
+                <h3>Latest Projects</h3>
             </div>
-            <!-- Project 1 End -->
-            <!-- Project 2 Start -->
-            <div class="col-12 col-md-6 project aling-items-center">
-                <div class="col-12 text-wrap accent">
-                    <h2>Video Title</h2>
-                    <a href="#"><span>Video owner</span></a>
-                </div>
-                <a href="" class="col-12">
-                    <img src="images/sample.jpeg" alt="" id="home-project1">
-                </a>
+            <div class="col-12 col-lg-6 project text-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Wuia9InqPM0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen itemprop="creator"></iframe>
             </div>
-            <!-- Project 2 End -->
-            <!-- Project 3 Start -->
-            <div class="col-12 col-md-6 project aling-items-center">
-                <div class="col-12 text-wrap accent">
-                    <h2>Video Title</h2>
-                    <a href="#"><span>Video owner</span></a>
-                </div>
-                <a href="" class="col-12">
-                    <img src="images/sample.jpeg" alt="" id="home-project1">
-                </a>
+            <div class="col-12 col-lg-6 project text-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/8FOAMQpKqOQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen itemprop="creator"></iframe>
             </div>
-            <!-- Project 3 End -->
-            <!-- Project 4 Start -->
-            <div class="col-12 col-md-6 project aling-items-center">
-                <div class="col-12 text-wrap accent">
-                    <h2>Video Title</h2>
-                    <a href="#"><span>Video owner</span></a>
-                </div>
-                <a href="" class="col-12">
-                    <img src="images/sample.jpeg" alt="" id="home-project1">
-                </a>
+            <div class="col-12 col-lg-6 project text-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4UvwATtQUhA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen itemprop="creator"></iframe>
             </div>
-            <!-- Project 4 End -->
-        </div>
+            <div class="col-12 col-lg-6 project text-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/1llyyYd5LGI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen itemprop="creator"   ></iframe>
+            </div>
+        </section>
         <!-- Projects End -->
 
         <!-- Footer Start -->
-        <footer class="row align-items-center">
-            <form action="contact.php" method="post"
-                class="align-items-center d-flex flex-column justify-content-center">
-                <input type="text" name="email" class="form-control m-1" placeholder="Email address:">
-                <input type="text" name="fname" class="form-control m-1" placeholder="First Name:">
-                <input type="text" name="lname" class="form-control m-1" placeholder="Last Name:">
-                <input type="text" name="subject" class="form-control m-1" placeholder="Subject:">
-                <textarea type="text" name="message" class="form-control m-1" placeholder="Message:"></textarea>
-                <input type="submit" value="Send" id="button" class="btn m-2">
-            </form>
+        <section class="row text-wrap" id="contact">
+            <h3>Contact Me</h3>
+        </section>
+        <footer class="row align-items-center d-flex justify-content-center">
+            <div class="col-12 col-md-6 text-wrap flex-column text-center">
+                <h4>szurmik.marci@icloud.com</h4>
+            </div>
+            <div class="col-12 col-md-6 flex-column text-center">
+                <a class="m-2" href="https://twitter.com/marcellszurmik" target="_blank"><i class="bi bi-twitter" itemprop="url"></i></a>
+                <a class="m-2" href="https://www.instagram.com/marci_szurmik/" target="_blank" itemprop="url"><i class="bi bi-instagram"></i></a>
+                <i class="m-2 bi bi-discord" title="KorsoTea#3244" onclick="copy()"></i>
+            </div>
+            <div class="text-wrap row d-flex justify-content-center align-items-center ">
+                <div class="col-12 ex d-flex justify-content-center align-items-center">
+                    <p>Made by <a target="_blank" href="https://szakacsgergo.com/" itemprop="maintainer">Szakács Gergő</a></p>
+                </div>
+            </div>
         </footer>
         <!-- Footer End -->
-    </div>
-    <!-- Container End -->
 
+    </article>
+    <!-- Container End -->
+</main>
+
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/burger.js"></script>
+    
 </body>
 
 </html>

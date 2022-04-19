@@ -46,6 +46,13 @@ body {
   h2 {
     font-size: clamp(0.5rem, 1rem + 10vw, 2rem);
   }
+  h3 {
+    font-size: clamp(6rem, 10vw, 2rem);
+    color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #fff;
+    font-family: sans-serif;
+  }
 }
 .text-wrap,
 .button-wrap {
@@ -68,4 +75,11 @@ body {
 }
 .text-wrap p a:hover {
   text-decoration: underline;
+}
+.text-wrap .ex {
+  font-size: clamp(1rem, 10vw, 1.5rem);
+  a,
+  p {
+    color: $secondary-color;
+  }
 }

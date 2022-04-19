@@ -54,6 +54,13 @@ body {
 .text-wrap h2 {
   font-size: clamp(0.5rem, 1rem + 10vw, 2rem);
 }
+.text-wrap h3 {
+  font-size: clamp(6rem, 10vw, 2rem);
+  color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #fff;
+  font-family: sans-serif;
+}
 
 .text-wrap,
 .button-wrap {
@@ -81,6 +88,14 @@ body {
 
 .text-wrap p a:hover {
   text-decoration: underline;
+}
+
+.text-wrap .ex {
+  font-size: clamp(1rem, 10vw, 1.5rem);
+}
+.text-wrap .ex a,
+.text-wrap .ex p {
+  color: #2f2d2f;
 }
 
 .home-welcome {
@@ -129,21 +144,96 @@ body {
   position: relative;
   margin-top: 5em;
   min-height: 100vh;
-  margin-left: 1em;
-  margin-right: 1em;
   margin-bottom: 5em;
 }
 
-.project {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
+nav {
+  height: 4em;
+  position: fixed;
+  z-index: 1030;
+  transition: all 1s ease;
 }
 
-#home-project1 {
-  max-width: 100%;
+.navigation {
+  overflow: hidden;
+  height: 100vh;
 }
 
+.burger {
+  z-index: 1030;
+  cursor: pointer;
+  position: fixed;
+  top: 2em;
+  right: 2em;
+}
+.burger span {
+  position: relative;
+  display: block;
+  margin: 0.2em;
+  height: 0.2em;
+  width: 1.8em;
+  background-color: #fff;
+}
+
+.burger-active #line1 {
+  transition: all 0.5s ease-in-out;
+  transform: rotate(45deg);
+}
+
+.burger-active #line2 {
+  transition: all 0.5s ease-in-out;
+  margin-top: -0.4em;
+  transform: rotate(-45deg);
+}
+
+.burger-active span {
+  transition: all 0.5s ease-in-out;
+  background-color: #fff;
+}
+
+.navigation-menu {
+  transition: all 1s ease;
+  margin: 0;
+  right: 0;
+  position: fixed;
+  overflow: hidden;
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(-90deg, #9600b2, rgba(0, 0, 0, 0));
+  z-index: 1000;
+}
+.navigation-menu ul {
+  margin-top: 5em;
+  list-style: none;
+}
+.navigation-menu ul li a {
+  transition: all 0.5s ease;
+  text-decoration: none;
+  color: #fff;
+  font-size: clamp(2.5rem, 0.95rem + 0.25vw, 1.25rem);
+}
+.navigation-menu ul li a:hover {
+  color: #9600b2;
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 71.8125em) {
+  .navigation-menu {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 39.9375em) {
+  .navigation-menu {
+    width: 100%;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0), #9600b2);
+  }
+}
 footer {
-  min-height: 50vh;
-  background-color: #2f2d2f;
+  min-height: 35vh;
+}
+
+i {
+  color: #fff;
+  font-size: 2rem;
+  cursor: pointer;
 }
