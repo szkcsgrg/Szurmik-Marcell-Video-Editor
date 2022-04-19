@@ -5,10 +5,10 @@ _2022.04.04._
 
 ## Contributors
 
-- Szakács Gerő - <szkcsgrg@gmail.com>
+- Szakács Gerő - <info@szakacsgergo.com>
 
 ---
 
 ## Licence & Copyright
 
-© [Szakács Gergő](https://smoketmg.hu/), Szurmik Marcell
+© [Szakács Gergő](https://szakacsgergo.com/), Szurmik Marcell
