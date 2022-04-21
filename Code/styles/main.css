@@ -72,7 +72,7 @@ body {
 }
 .text-wrap a,
 .button-wrap a {
-  color: #9600b2;
+  color: #fff;
   text-decoration: none;
   font-size: clamp(1.25rem, 0.5rem + 0.5vw, 1.5rem);
 }
