@@ -58,11 +58,13 @@ body {
 .button-wrap {
   transition: all 1s ease-in-out;
   p {
+    transition: all 1s ease-in-out;
     font-size: clamp(1.25rem, 0.5rem + 0.5vw, 1.5rem);
   }
   a {
+    transition: all 1s ease-in-out;
     color: $font-color;
-    text-decoration: none;
+    text-decoration: underline;
     font-size: clamp(1.25rem, 0.5rem + 0.5vw, 1.5rem);
   }
   span {
@@ -74,7 +76,7 @@ body {
   font-weight: bold;
 }
 .text-wrap p a:hover {
-  text-decoration: underline;
+  font-size: clamp(1.8rem, 0.95rem + 0.25vw, 1.25rem);
 }
 .text-wrap .ex {
   font-size: clamp(1rem, 10vw, 1.5rem);
